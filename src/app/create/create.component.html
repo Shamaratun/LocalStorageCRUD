@@ -1,0 +1,48 @@
+<h1>Registration form</h1>
+<form (ngSubmit)="onSubmit()">
+  <table>
+    <div>
+      <label for="">First name:</label>
+      <input
+        type="text"
+        placeholder="Enter First name"
+        name="name"
+        id="name"
+        [(ngModel)]="u.name"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="">age:</label>
+      <input
+        type="number"
+        placeholder="Enter last name"
+        name="age"
+        id=""
+        [(ngModel)]="u.age"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="">Phone:</label>
+      <input
+        type="text"
+        placeholder="Enter number"
+        name="phone"
+        id=""
+        [(ngModel)]="u.phone"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="">address: </label>
+      <input
+        type="address"
+        name="address"
+        id="address"
+        [(ngModel)]="u.address"
+      />
+    </div>
+    <br />
+  </table>
+</form>
