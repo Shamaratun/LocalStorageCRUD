@@ -13,12 +13,12 @@
     </div>
     <br />
     <div>
-      <label for="">age:</label>
+      <label for="">Age:</label>
       <input
         type="number"
-        placeholder="Enter last name"
+        placeholder="Enter your age"
         name="age"
-        id=""
+        id="age"
         [(ngModel)]="u.age"
       />
     </div>
@@ -35,7 +35,7 @@
     </div>
     <br />
     <div>
-      <label for="">address: </label>
+      <label for="">Address: </label>
       <input
         type="address"
         name="address"
@@ -46,7 +46,7 @@
     <br />
     <div>
 
-			<input type="submit" value="Submit" >  
+			<button type= "submit"  class="btn btn-success" >{{isUpdate ? 'Update' : 'Submit'}}</button>
        
 		</div>
   </table>
