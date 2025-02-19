@@ -22,12 +22,15 @@ export class CreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('CreateComponent');
-    console.error('CreateComponent');
+    // console.log('CreateComponent');
+    // console.error('CreateComponent');
     localStorage.setItem('name', 'john');
-    localStorage.setItem('age', '25');
-    localStorage.setItem('phone', '12345');
-    localStorage.setItem('address', 'main street');
+    localStorage.setItem('price', '12325');
+    localStorage.setItem('quantity', '45');
+    localStorage.setItem('purchaseDate', '2022-12-12');
+    localStorage.setItem('sellDate', '2022-12-12');
+    localStorage.setItem('seller', 'john');
+    localStorage.setItem('buyer', 'john');
   }
 
   onSubmit() {
