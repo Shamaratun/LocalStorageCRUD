@@ -1,0 +1,31 @@
+<table class="table table-striped">
+    <thead>
+        <tr><th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Phone</th>
+            <th>Address</th>
+           <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @for(user of Meme;track user){
+        <tr>  <td>{{ Meme.indexOf(user)+1 }} </td>
+             <td>{{ user.name }}</td>
+            <td style="color: rgb(110, 79, 184);">{{ user.age }}</td>
+            <td >{{ user.phone }}</td>
+            <td style="color: rgb(54, 71, 102);">{{ user.address }}</td>
+            <td><button class="btn btn-primary btn-outline-warning " style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" (click)="editUser(user)">Update</button><br>
+
+                <button class="btn btn-outline-danger btn-secondary " style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"(click)="deleteUser(user)">Delete</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+    
+    </table>
+    <button class="btn btn-primary btn-outline-warning " >Update</button>   
+    <button class="btn btn-outline-danger btn-secondary ">Delete</button>
+
+

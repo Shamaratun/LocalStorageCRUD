@@ -20,6 +20,7 @@ export class User {
   phone: string;
   address: string;
 
+
   constructor(name: string, age: number, phone: string, address: string) {
     this.name = name;
     this.age = age;
