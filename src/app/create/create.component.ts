@@ -10,28 +10,31 @@ import { User } from '../app.component';
    styleUrl: './create.component.css'
 })
 export class CreateComponent implements OnInit{
-  u: User=new User('', 0, '','');
+  u: User = new User('',0,'','');
+  constructor(){
+    
+  }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    console.log('CreateComponent');
+    console.error('CreateComponent');
+    localStorage.setItem('name','john');
+localStorage.setItem('age','25');
+localStorage.setItem('phone','12345');
+localStorage.setItem('address','main street');
+    
   } 
+
  onSubmit(){
-   let users = JSON.parse(localStorage.getItem('users')||'[]');
+   let users = JSON.parse(localStorage.getItem('user')||'[]');
    users.push(this.u);
-   localStorage.setItem('users',JSON.stringify('users'));
+   localStorage.setItem('user',JSON.stringify(users));
    this.u = new User ('', 0, '','');
    alert('user added successfully')
  }
   
 
-//   constructor(){}
-//     ngOnInit():void{
-// console.log('CreateComponent');
-// console.error('CreateComponent');
 
-// localStorage.setItem('name','john');
-// localStorage.setItem('age','25');
-// localStorage.setItem('phone','12345');
-// localStorage.setItem('address','main street');
-//     }
+
+
   }
 
